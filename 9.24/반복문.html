@@ -11,7 +11,7 @@
   //   console.log(i);
   // }
 
-  let numbers = [7, 14, 3, 6, 11, 22, 4, 8, 0];
+  let numbers = [7, 14, 3, 6, 11, 22, 4];
   // for (let i = 0; i <= numbers.length - 1; i++) { // =for (let i = 0; i < numbers.length; i++)
   //   // numbers.fori 여기서 tab 누르면 for (let i = 0; i < numbers.length; i++){}
   //   // numbers.forr 여기서 tab 누르면 for for (let i = numbers.length - 1; i >= 0; i--){}
@@ -22,9 +22,22 @@
   //   console.log(i);
   // }
 
-  for (let num of numbers){
-    console.log(num);
+  // for (let num of numbers){
+  //   console.log(num);
+  // }
+
+  let index = 0;
+  let number = numbers[index]; // 처음은 numbers[0]이니깐 7임
+  while (typeof number === 'number'){ //typeof 7 === 'number'이니깐 true가 나올거임.
+      console.log(number);
+      number = numbers[index++]; //index 7일때 undefined 니깐 빠져나옴
   }
+  // let index = 0; 위와 같음
+  // let number;
+  // while((number = numbers[index++]) != null){
+  //     console.log(number);
+  // }
+
   </script>
 </head>
 <body>
