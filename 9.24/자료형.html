@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        let arr = ['Korea', 16, 'France', 'Germany', 57, true];
+
+        arr.at(3); // 'Franc' 출력
+
+        let tail = ['a', 'b', 'c']
+        let newArr = arr.concat(tail); // arr뒤에 tail 출력
+
+        arr.fill('ㅋ'); // 위에 선언한 arr이 전부 ㅋ로바뀜.
+
+        arr.fill(0, 3); // 3번째 인자 부터 0으로 바뀜.
+
+        arr.fill(7, 1, 3); // 1이상 3미만 인자가 7로 바뀜.
+
+        arr.includes('ㅋ'); // true
+        arr.includes(8); // false
+
+        let sample = ['높', '은', '산', ' ', '깊', '은', '골', ' ', '적', '막', '한', ' ' ];
+        sample.indexOf(' '); // ' '의 첫번째인 3인자가 나옴
+        sample.lastIndexOf(' '); // ' '의 마지막인 11인자가 나옴
+
+        arr.join();
+
+        arr.join(' - ');
+
+        arr.pop();
+        arr; // 마지막 인자 제거됨.
+
+        arr.push('Canada');
+        arr; // 마지막 인자에 Canada가 추가됨.
+    </script>
+</head>
+<body>
+
+</body>
+</html>
