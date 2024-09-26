@@ -9,7 +9,7 @@
     <script>
         let arr = ['Korea', 16, 'France', 'Germany', 57, true];
 
-        arr.at(3); // 'Franc' 출력
+        arr.at(3); // 'France' 출력
 
         let tail = ['a', 'b', 'c']
         let newArr = arr.concat(tail); // arr뒤에 tail 출력
@@ -36,6 +36,49 @@
 
         arr.push('Canada');
         arr; // 마지막 인자에 Canada가 추가됨.
+
+        arr.reverse() // 인자가 반대로됨. 원본도 바뀜
+
+        arr.shift(); // 첫번째 인자가 제거됨.
+
+        let a =['a', 'b', 'c'];
+        let b = a.slice();
+        a[0] = 'z';
+        b; // [a, b, c]로 출력
+
+        let nums = [9, 1, 11, 7, 6, 23];
+        nums.sort((a, b) => a - b);
+        nums.sort((a, b) => b - a);
+        nums.splice(2,2,9); //2, 3번 인자가 제거되고, 제거된 곳에 9가 추가됨.
+
+        let numss = [5, 7, 6, 8, 3];
+
+        numss.every((x) => {
+            console.log(x);
+
+            return true;
+        } );
+        numss.every((x) =>{return x >0;}) //true
+        numss.every((x) =>{return x %2 !== 0;}) //false  numss.every((x) => x % 2 !== 0);로도 사용 가능.
+
+        let arrr = ['Korea', 16, 'France', 'Germany', 57, true]
+        arrr.every((x) => typeof x === 'string'); //false
+        arrr.some((x) => typeof x === 'string'); //한개라도 string열이 있으므로 ture
+        arrr.filter((x) => typeof x === 'string')
+        arrr.filter((x) => typeof x === 'number')
+        arrr.filter((x) => typeof x === 'boolean')
+        arrr.filter((x) => typeof x === null) //[]로 뜸.
+
+        arrr.forEach((x, i, a) => {
+            console.log(x);
+        });
+        arrr.forEach((x, i, a) => {
+            console.log(i);
+        });
+        arrr.forEach((x, i, a) => {
+            console.log(a);
+        });
+        arrr.filter((x, i) => i % 2 !==0).forEach((x)=>console.log(x)); // 홀수 인자
     </script>
 </head>
 <body>
