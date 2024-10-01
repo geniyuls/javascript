@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        /* 짝수만 나오도록 코드를 구성하시오.*/
+        // let nums= [6, 7, 4, 2, 16, 8, 3, 10]
+        // for (let num of nums){
+        //     if ([num % 2 === 0]){ console.log(num)}
+        // }
+
+        // let numss = [10, 6, 7, 7, 3, 8, 10, 10, 6, 2, 3];
+        // let dist = [];
+        // for (let numm of numss){
+        //     if (!dist.includes(numm)){dist.push(numm);}
+        // }
+        // for (let d of dist){
+        //     console.log(d);
+        // }
+        // nums가 가진 인자 중 최대, 최소 값을 찾아 출력하시오. 코드
+
+        //내가 푼거
+        // let numsss = [798, 361, -1330, 0, 17, 896, -566, 78];
+        // let max = nums[0];
+        // let min = nums[0];
+        // for (i = 0; i < numsss.length; i++){
+        //    if(max < numsss[i]){max = numsss[i]}
+        // }
+        // for (i = 0; i < numsss.length; i++){
+        //     if(min > numsss[i]){min = numsss[i]}
+        // }
+        // console.log(`최대: ${max}`);
+        // console.log(`최소: ${min}`);
+
+        //쌤이 푼거
+        // let numsss = [798, 361, -1330, 0, 17, 896, -566, 78];
+        // let max = numsss[0];
+        // let min = numsss[0];
+        // for (let nummm of numsss){
+        //    if(max > max){
+        //        max = nummm}
+        //
+        //     if(nummm < min){
+        //         min = nummm}
+        // }
+        // console.log(`최대: ${max}`);
+        // console.log(`최소: ${min}`);
+
+        //홀수 새기
+        // let n= 0;
+        // function contOdds(...nums){
+        //     for(i = 0; i < nums.length; i++){
+        //         if(nums[i] % 2 === 1){n++}}
+        // }
+        // contOdds(1, 2, 3, 4, 5, 6, 7, 8, 9)
+        // console.log(`홀수의 개수: ${n}`);
+
+        //홀수를 찾고 중복 없애기
+        function countOddsDist(...nums) {
+            // let count = 0;
+            let temp = [];
+            for (let num of nums) {
+                if (num % 2 !== 0) {
+                    if (!temp.includes(num)) {
+                        console.log('홀수찾음 : ' + num)
+                        temp.push(num);
+                        // count++;
+                    }
+                }
+            }
+            // return count;
+            return temp.length;
+        }
+
+        console.log(countOddsDist(1, 2, 3, 2, 1));
+
+
+        // 전달 받은 2이상의 자연수 num이 소수(Prime Number)인가의 여부를 반환하는 함수 is Prime의 구현부를 완성하세요.
+
+        // function isPrime(num){
+        //     if(isPrime / =1; )
+        // }
+        // for{}
+        // const a = Math.floor(num);
+
+        // 콜르츠 추측이란 어떠한 2이상의 자연수는 아래 일련의 과정을 거치면 언젠간 1이된다는 가정입니다.
+        // 어떠한 수 n이 짝수 일 때, 2로 나눔
+        // 어떠한 수 n이 홀수 일 때, 3을 곱하고 1을 더함
+        // 위절차를 몇번 반복하였을 때 전달 받은 수 num이 1이 되는지를 반환하는 함수 countCollatz를 완성하세요.
+        //coountCollatz(12); -> 9 (12 > 6 > 3 > 10 > 5 > 16 > 8 > 4 > 2 > 1이므로)
+
+        // let i = 0;
+        //
+        // function countCollatz(num) {
+        //     while (num !== 1) {
+        //         if (num % 2 === 0) {
+        //             num = num / 2;
+        //             i++;
+        //         } else {
+        //             num = num * 3 + 1;
+        //             i++;
+        //         }
+        //     }
+        // }
+        //
+        // countCollatz(12);
+        //
+        // console.log(`절차 개수: ${i}`);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

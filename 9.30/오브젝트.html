@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // let countryNameMap = {
+        //     KR: '대한민국',
+        //     US: '미국',
+        //     JP: '일본',
+        //     FR: '프랑스',
+        //     DE: '독일'
+        // };
+        // Object.keys(countryNameMap).forEach((x) => {
+        //     console.log(`${x}: $countryNameMap[x]}`)
+        // })
+        // Object.keys(countryNameMap); //(5) ['KR', 'US', 'JP', 'FR', 'DE']
+        // Object.values(countryNameMap); //(5) ['대한민국', '미국', '일본', '프랑스', '독일']
+        // let what = Object.entries(countryNameMap);
+        // what; //(5) [Array(2), Array(2), Array(2), Array(2), Array(2)]
+        // console.log(what[4][1]); // 독일
+        // // what[4] => ['DE', '독일'] / what[4][1] =>['DE', '독일'][1]
+        // Object.entries(countryNameMap).forEach((x) => {console.log(`${x[0]}: ${x[1]}`)});
+
+        let students = [
+            {name: '깁갑수', age: 85},
+            {name: '최춘자', age: 79},
+            {name: '이말년', age: 50},
+            {name: '이미자', age: 68},
+            {name: '구형락', age: 72},
+        ];
+
+        students[0]; //{name: '깁갑수', age: 85}
+        students.name; //'깁갑수
+
+        // 내가 한 연습
+        // let avgAge = 0;
+        // for ( i = 0; i < students.length; i++)
+        // {
+        //     console.log(`${students[i].name}씨는 ${students[i].age} 살입니다.`)
+        //     avgAge = avgAge + students[i].age;
+        // }
+        // avgAge = avgAge / students.length;
+        // console.log(`평균 연령은 ${avgAge}살 입니다.`);
+
+        // let avgAge = 0;
+        // for (const studentObject of students){
+        //     const name = studentObject['name'];
+        //     const age = studentObject['age'];
+        //     console.log(`${name}씨는 ${age}살입니다.`);
+        //     avgAge += age;
+        // }
+        // avgAge /= students.length;
+        // console.log(`평균 연령은 ${avgAge}살입니다.`)
+
+        let hobbyMap = {
+            골프 : 0,
+            게이트볼 : 0,
+            테니스 : 0,
+        };
+        let studentss = [
+            { name : '깁갑수', age : 85, hobbies: ['골프'],},
+            { name : '최춘자', age : 79, hobbies: [],},
+            { name : '이말년', age : 50, hobbies: ['골프', '테니스'],},
+            { name : '이미자', age : 68, hobbies: ['게이트볼'],},
+            { name : '구형락', age : 72, hobbies: ['골프', '게이트볼'],}
+        ]
+
+        let avgAge = 0;
+        for (let studentssObject of studentss){
+            let name = studentssObject['name'];
+            let age = studentssObject['age'];
+            let hobbies = studentssObject['hobbies'];
+            console.log(`${name}씨는 ${age}살, 취미는 ${hobbies.length}개입니다.`);
+            avgAge += age;
+            hobbies.forEach((hobby) => hobbyMap[hobby] += 1);
+        }
+
+        avgAge /= studentss.length;
+        console.log(`평균 연령은 ${avgAge}살입니다.`)
+        Object.entries(hobbyMap).forEach(([key, value]) => {console.log(`${key}를 취미로하는 사람은 ${value}명입니다.`);});
+
+        //내가 하던거
+        // let golf = 0;
+        // let gateball = 0;
+        // let tenis = 0;
+        //
+        // let avgAge = 0;
+        // let hob = 0;
+        //
+        // for ( i = 0; i < studentss.length; i++)
+        // {
+        //     hob = studentss[i].hobbies.length;
+        //
+        //     console.log(`${studentss[i].name}씨는 ${students[i].age}살, 취미는 ${hob}개입니다.`)
+        //     avgAge = avgAge + studentss[i].age;
+        //     while(studentss[i].hobbies ==='골프'){golf ++;}
+        //     while(studentss[i].hobbies ==='게이트볼'){gateball ++;}
+        //     while(studentss[i].hobbies ==='테니스'){tenis ++;}
+        // }
+
+        // avgAge = avgAge / studentss.length;
+        // console.log(`평균 연령은 ${avgAge}살입니다.`)
+        // console.log(`골프를 취미로하는 사람은 ${golf}명 입니다.`);
+        // console.log(`게이트볼을 취미로하는 사람은 ${gateball}명 입니다.`);
+        // console.log(`테니스를 취미로 하는 사람은 ${tenis}명 입니다.`);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
