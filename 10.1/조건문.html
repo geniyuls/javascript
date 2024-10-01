@@ -60,32 +60,38 @@
         // console.log(`홀수의 개수: ${n}`);
 
         //홀수를 찾고 중복 없애기
-        function countOddsDist(...nums) {
-            // let count = 0;
-            let temp = [];
-            for (let num of nums) {
-                if (num % 2 !== 0) {
-                    if (!temp.includes(num)) {
-                        console.log('홀수찾음 : ' + num)
-                        temp.push(num);
-                        // count++;
-                    }
-                }
-            }
-            // return count;
-            return temp.length;
-        }
-
-        console.log(countOddsDist(1, 2, 3, 2, 1));
-
-
-        // 전달 받은 2이상의 자연수 num이 소수(Prime Number)인가의 여부를 반환하는 함수 is Prime의 구현부를 완성하세요.
-
-        // function isPrime(num){
-        //     if(isPrime / =1; )
+        // function countOddsDist(...nums) {
+        //     // let count = 0;
+        //     let temp = [];
+        //     for (let num of nums) {
+        //         if (num % 2 !== 0) {
+        //             if (!temp.includes(num)) {
+        //                 console.log('홀수찾음 : ' + num)
+        //                 temp.push(num);
+        //                 // count++;
+        //             }
+        //         }
+        //     }
+        //     // return count;
+        //     return temp.length;
         // }
-        // for{}
-        // const a = Math.floor(num);
+        //
+        // console.log(countOddsDist(1, 2, 3, 2, 1));
+        //
+        //
+        // // 전달 받은 2이상의 자연수 num이 소수(Prime Number)인가의 여부를 반환하는 함수 is Prime의 구현부를 완성하세요.
+        //
+        // function isPrime(num){
+        //     for(let i = 2; i < num; i++){
+        //         //num이 8인 상황: i는 2부터 7까지
+        //         if(num % i === 0) {
+        //             return false;
+        //         }
+        //     }
+        //     return true;
+        // }
+        // console.log(isPrime(2));
+
 
         // 콜르츠 추측이란 어떠한 2이상의 자연수는 아래 일련의 과정을 거치면 언젠간 1이된다는 가정입니다.
         // 어떠한 수 n이 짝수 일 때, 2로 나눔
@@ -111,6 +117,28 @@
         //
         // console.log(`절차 개수: ${i}`);
 
+        //2차원의 좌표 평면상의 좌표를 각 (x1, y1), (x2, y2)로 전달 받았다고 하였을 때 이 두 점의 거리를 계산할 수 있는 함수 calcDistance를 완성하세요.
+        //좌표는 y축은 위로 갈수록 값이 커지는 세로축, x축은 오른쪽으로 갈수록 값이 커지는 가로축입니다.
+        // Math.sqrt
+        //calcDistance(3, 2, 8, 5); ->5.83095189484534
+
+        // function calcDistance(x1, y1, x2, y2){
+        //     let t = Math.sqrt(Math.pow(x2-x1,2) + Math.pow(y2-y1,2));
+        //     console.log(t);
+        // }
+        // calcDistance(3, 2, 8, 5);
+
+        //안되는거
+        // function countCollatz(num){
+        //     if(num !== 1){
+        //         if(num % 2 === 0){ num = num / 2; countCollatz(num)}
+        //         else if(num % 2 === 1){ num = num * 3 + 1; countCollatz(num)}
+        //     }
+        //     else {let i = num;}
+        // }
+        // console.log(i)
+        //
+        // countCollatz(12)
     </script>
 </head>
 <body>
