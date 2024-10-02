@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+    //전달 받은 배열 nums가 가지고 있는 인자 중 num이 몇번째로 큰 값인지를 반환하는 함수 findOrder를 완성하세요.
+    // nums는 반드시 배열이지만 이가 가지는 모든 인자가 숫자인 것은 아닙니다. 순서를 계한할 때 숫자가 아닌 인자는 숫자에서 제외하세요.
+    // 또한, num이 nums에 없을 수도 있으며 이때는 -1을 반환하세요.
+
+    // function findOrder(nums, num) {
+    //     let temp = []
+    //     for (i = 0; i < nums.length; i++) {
+    //         if (typeof nums[i] === 'number') {
+    //             if(!temp.includes(nums[i])){
+    //             temp.push(nums[i])}
+    //         }
+    //     }
+    //     temp.sort((a, b) => b - a);
+    //     let find = 0;
+    //
+    //     if (!temp.includes(num)){
+    //         return -1
+    //     }
+    //     for (j = 0; j < temp.length; j++) {
+    //                 if (temp[j] !== num) {
+    //                     find = j
+    //                 } else {
+    //                     break
+    //                 }
+    //     }return j + 1
+    //
+    // }
+
+
+    // console.log(findOrder([5, 1, 7, 3, 6], 3));
+    //기대출력: 4 (3은 앞선 배열에서 네번째로 큰 값이므로)
+    // console.log(findOrder([3, 2, 1, '57', '966', false, null], 2));
+    // console.log(findOrder([1, 2, 3, 4, 5], 99)); //기대출력 -1 (99는 앞선 배열에 존재하지 않으므로)
+
+
+    // 배열에서 num번째로 큰 숫자찾기
+    // function findOrder(nums, num) {
+    //   let temp = []
+    //   for(i = 0; i < nums.length; i++)
+    //   {temp.push(nums[i])
+    //   }
+    //   temp.sort((a, b) => a - b);
+    //   console.log(temp[num]-1)
+    // }
+    //
+    // console.log(findOrder([5, 1, 7, 3, 6], 3));
+
+
+    // 각 학생의 세 과목의 평균 점수를 계산하여, 평균 점수가 가장 높은 학생의 이름과 평균 점수를, 평균 점수가 가장 낮은 학생의 이름과 평균 점수를 출력하세요.
+    //기대 출력 :
+    //최고 득점자 : 전우주 (평균: 98)
+    // 최저 특점자 : 고경태 (평균: 75)
+
+    const subjects = ['국어', '수학', '영어'];
+    const studentScoreMap = {
+        '고경태': {
+            '국어': 87,
+            '수학': 45,
+            '영어': 93
+        },
+        '전우주': {
+            '국어': 100,
+            '수학': 96,
+            '영어': 98,
+        },
+        '황현성': {
+            '국어': 80,
+            '수학': 72,
+            '영어': 88,
+        },
+    };
+
+    const studentAvgMap = {};
+    const studentNames = Object.keys(studentScoreMap); // ['고경태', '전우주', '황현성']
+    for (let studentName of studentNames) {
+        let score = studentScoreMap[studentName]; // {국어: ?, 영어: ?, 수학: ?}
+        let sum = 0;
+        for (let subject of subjects) {
+            sum += score[subject];
+        }
+        // sum += score['국어'];
+        // sum += score['수학'];
+        // sum += score['영어'];
+
+        studentAvgMap[studentName] = sum / subjects.length; //{고경태 : ?, 전우주: ?, 황현성: ?}
+    }
+    console.log('각 학생의 평균 점수: ')
+    console.log(studentAvgMap);
+
+    console.log(`전: ${studentNames}`);
+    studentNames.sort((a, b) => studentAvgMap[a] - studentAvgMap[b]);
+    console.log(`\n소팅 했음\n`);
+    console.log(`후: ${studentNames}`);
+
+    console.log(`최저 득점자: ${studentNames[0]} (평균: ${studentAvgMap[studentNames[0]]})`);
+    console.log(`최고 득점자: ${studentNames.at(-1)} (평균: ${studentAvgMap[studentNames.at(-1)]})`);
+
+    let result = Object.keys(studentScoreMap).map((student) => {
+        let sum = 0;
+        subjects.forEach((subject) => sum += studentScoreMap[student][subject]);
+        return [student, sum / subjects.length];
+    }).sort((a, b) => a[1] - b[1]);
+
+    console.log(`최저 득점자: ${result[0][0]} (평균: ${result[0][1]})`);
+    console.log(`최고 득점자: ${result.at(-1)[0]} (평균: ${result.at(-1)[1]})`);
+
+
+</script>
+<body>
+
+</body>
+</html>
