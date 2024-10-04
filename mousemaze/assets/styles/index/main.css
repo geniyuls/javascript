@@ -1,0 +1,193 @@
+main {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    color: black;
+}
+
+main > .about-me > .items {
+    display: flex;
+    font-size: 3rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main > .about-me {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+    background-color: beige;
+}
+
+main > .about-me > .mine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 2rem 5rem;
+    font-size: 1.2rem;
+    margin-top: 3rem;
+}
+
+main > .about-me > .mine table tr .me > img {
+    height: 12rem;
+}
+
+main > .skills {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: yellow;
+}
+
+main > .skills > .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 5rem;
+    font-size: 4rem;
+    margin-top: 3rem;
+}
+
+main> .skills > .skil{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem
+}
+main > .skills > .skil > .frontend {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vw;
+    width: 30rem;
+    border-radius: 1rem;
+    background-color: white;
+}
+
+main > .skills > .skil > .frontend > .talk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+    justify-content: flex-start;
+    padding-bottom: 6rem;
+}
+
+main > .skills > .skil > .frontend > img {
+    width: 20rem;
+    padding-bottom: 2rem;
+}
+
+main > .skills > .skil > .backend {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vw;
+    width: 30rem;
+    border-radius: 1rem;
+    background-color: white;
+}
+main > .skills > .skil> .backend > .talk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+    justify-content: flex-start;
+}
+
+main > .skills > .skil > .backend > img {
+    width: 20rem
+}
+
+main > .skills > .skil > .SB {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vw;
+    width: 30rem;
+    border-radius: 1rem;
+    background-color: white;
+}
+main > .skills > .skil> .SB > .talk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+    justify-content: flex-start;
+    padding-bottom: 9rem;
+}
+
+main > .skills > .skil > .SB > img {
+    width: 20rem;
+    padding-bottom: 6rem;}
+
+main > .Archiving {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: blue;
+}
+
+main > .Archiving > .arch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 5rem;
+    font-size: 4rem;
+    margin-top: 3rem;
+}
+
+main > .Projects {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #faa0a2;
+}
+
+main > .Projects > .proj {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 5rem;
+    font-size: 4rem;
+    margin-top: 3rem;
+}
+
+main > .Career {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: brown;
+}
+
+main > .Career > .care {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 5rem;
+    font-size: 4rem;
+    margin-top: 3rem;
+}

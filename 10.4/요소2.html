@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<input class="input">
+<script>
+    // const $input = document.body.querySelector('.input');
+    // $input.onkeydown = (e) => {
+    // console.log(e); 적은게 다찍힘
+
+    // const validKeys = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'Backspace'];
+    // console.log(e);
+    // if (!validKeys.includes(e.key)){
+    //     e.preventDefault();}
+    // };
+    const $input = document.body.querySelector('.input');
+    $input.addEventListener('click', () => {
+        alert('클릭함');
+    });
+    const toCallA = () => {alert('첫번째');};
+    $input.addEventListener('click', toCallA);
+    $input.addEventListener('click', () => {
+        alert('클릭함2')});
+
+
+    // $input.onfocusin = () => (console.log('포커스 들어옴'));
+    // $input.onfocusout = () => (console.log('포커스 나감'));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<table border="1">
+    <thead>
+    <tr>
+        <th scope="col">작성자</th>
+        <th scope="col">내용</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+<input name="writer" type="text">
+<input name="content" type="text">
+<button name="submit" type="button">작성</button>
+<script>
+    const $table = document.body.querySelector('table');
+    const $tbody = $table.querySelector('tbody');
+    const $writer = document.body.querySelector('[name="writer"]');
+    const $content = document.body.querySelector('[name="content"]');
+    const $submit = document.body.querySelector('[name="submit"]');
+
+    $submit.addEventListener('click', () => {
+        // let a = document.createElement('tr');
+        // let b = document.createElement('td');
+        // let c = document.createElement('td');
+        // $tbody.append(a)
+        // a.append(b)
+        // a.append(c)
+        // b.innerText = $writer.value;
+        // c.innerText = $content.value;
+
+        $tbody.innerHTML += `
+        <tr>
+            <td>${$writer.value}</td>
+            <td>${$content.value}</td>
+        </tr>`
+        $writer.value = '';
+        $content.value = '';
+    });
+</script>
+</body>
+</html>

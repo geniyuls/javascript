@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<input name="valA">
+<select name="op">
+    <option value="add">+</option>
+    <option value="sub">-</option>
+    <option value="mul">*</option>
+    <option value="div">/</option>
+    <option value="pow">**</option>
+</select>
+<input name="valB">
+<button name="calc" type="button">계산</button>
+<span class="result"></span>
+<script>
+    const $valA = document.body.querySelector('[name="valA"]');
+    const $op = document.body.querySelector('[name="op"]');
+    const $valB = document.body.querySelector('[name="valB"]');
+    const $calc = document.body.querySelector('[name="calc"]');
+    const $result = document.body.querySelector('.result');
+
+    $calc.addEventListener('click', () => {
+
+        // if ($op.value === "더하기") {
+        //     $result.value = (parseFloat($valA.value) + parseFloat($valB.value));
+        // } else if ($op.value === "빼기") {
+        //     $result.value = (parseFloat($valA.value) - parseFloat($valB.value));
+        // } else if ($op.value === "곱하기") {
+        //     $result.value = (parseFloat($valA.value) * parseFloat($valB.value));
+        // } else if ($op.value === "나누기") {
+        //     $result.value = (parseFloat($valA.value) / parseFloat($valB.value));
+        // } else if ($op.value === "나머지") {
+        //     $result.value = (parseFloat($valA.value) % parseFloat($valB.value));
+        // }
+        // $result.innerText = $result.value;
+        // console.log($result.value);
+
+        // const valA= parseFloat($valA.value);
+        // const valB= parseFloat($valB.value);
+        // $result.innerText = {
+        //     add: valA + valB,
+        //     sub: valA - valB,
+        //     mul: valA * valB,
+        //     div: valA / valB,
+        //     power: valA ** valB,
+        // }[$op.value];
+
+        const valA= parseFloat($valA.value);
+        const valB= parseFloat($valB.value);
+        $result.innerText = ({
+            add: () => valA + valB,
+            sub: () => valA - valB,
+            mul: () => valA * valB,
+            div: () => valA / valB,
+            pow: () => valA ** valB,
+        }[$op.value])();
+
+    });
+</script>
+</body>
+</html>
